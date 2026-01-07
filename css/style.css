@@ -2,10 +2,58 @@
 /* Universelle                  */
 /*------------------------------*/
 
+header {
+  background-color: #303030;
+}
+
+a {
+  color: rgb(238, 233, 239);
+  text-decoration: none;
+}
+
+.nav-branding {
+  font-size: 2rem; /* size of logo text */
+  font-weight: bold;
+}
+
+.nav-link {
+  transition: 0.3s ease; /* smooth transition */
+}
+
+.nav-link:hover {
+  color: #c800ff; /* hover effect */
+}
+
+.hamburger-menu {
+  display: none; /* Hidden by default, shown in mobile version */
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  background-color: rgb(238, 233, 239);
+  border-radius: 1rem; /* rounded edges */
+  transition: all 0.3s ease;
+}
+
 /*------------------------------*/
 /* Mobil version                */
 /*------------------------------*/
 
+@media (max-width: 768px) {
+  .hamburger-menu.active .hamburger-bar:nth-child(1) {
+    transform: translateY(0.9rem) rotate(45deg); /* Move down and rotate */
+  }
+  .hamburger-menu.active .hamburger-bar:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+  }
+  .hamburger-menu.active .hamburger-bar:nth-child(3) {
+    transform: translateY(-0.9rem) rotate(-45deg); /* Justér for bedre kryds */
+  }
+
+  .nav-menu {
+    background-color: #303030;
+  }
+}
 /*------------------------------*/
 /* Desktop version              */
 /*------------------------------*/

@@ -8,17 +8,8 @@
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-header {
-  background-color: #303030;
-}
-
 li {
   list-style: none;
-}
-
-a {
-  color: rgb(238, 233, 239);
-  text-decoration: none;
 }
 
 .navbar {
@@ -36,59 +27,29 @@ a {
   gap: 5rem;
 }
 
-.nav-branding {
-  font-size: 2rem; /* size of logo text */
-  font-weight: bold;
-}
-
-.nav-link {
-  transition: 0.3s ease; /* smooth transition */
-}
-
-.nav-link:hover {
-  color: #c800ff; /* hover effect */
-}
-
-.hamburger-menu {
-  display: none; /* Hidden by default, shown in mobile version */
-  cursor: pointer;
-}
-
 .hamburger-bar {
-  background-color: rgb(238, 233, 239);
-  border-radius: 1rem; /* rounded edges */
   display: block; /*stacks bars vertically*/
   width: 2.5rem;
   height: 0.3rem;
   margin: 0.6rem auto;
-  transition: all 0.3s ease;
 }
 
+/*------------------------------*/
+/* Mobil version                */
+/*------------------------------*/
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block; /* Show hamburger menu on mobile */
   }
-  .hamburger-menu.active .hamburger-bar:nth-child(1) {
-    transform: translateY(0.9rem) rotate(45deg); /* Move down and rotate */
-  }
-  .hamburger-menu.active .hamburger-bar:nth-child(2) {
-    opacity: 0; /* Hide middle bar */
-  }
-  .hamburger-menu.active .hamburger-bar:nth-child(3) {
-    transform: translateY(-0.9rem) rotate(-45deg); /* Justér for bedre kryds */
-  }
 
   .nav-menu {
     position: fixed;
-    top: -100%;
-    left: 0;
+    top: 4rem;
+    left: -100%;
     gap: 0;
     flex-direction: column;
-    background-color: #303030;
     width: 100%;
     text-align: center;
-    transition: top 0.3s ease-in-out;
-    overflow: hidden;
   }
 
   .nav-item {
@@ -96,15 +57,6 @@ a {
   }
 
   .nav-menu.active {
-    top: 4rem; /* Show menu when active */
     left: 0;
   }
 }
-
-/*------------------------------*/
-/* Mobil version                */
-/*------------------------------*/
-
-/*------------------------------*/
-/* Desktop version              */
-/*------------------------------*/
