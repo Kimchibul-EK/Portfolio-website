@@ -11,9 +11,14 @@ a {
   text-decoration: none;
 }
 
-.nav-branding {
+.nav-logo {
   font-size: 2rem; /* size of logo text */
   font-weight: bold;
+}
+
+.nav-logo img {
+  height: 2rem; /* Match font-size for visibility */
+  width: auto;
 }
 
 .nav-link {
@@ -21,7 +26,7 @@ a {
 }
 
 .nav-link:hover {
-  color: #c800ff; /* hover effect */
+  color: #fc9ae6; /* hover effect */
 }
 
 .hamburger-menu {
@@ -57,3 +62,71 @@ a {
 /*------------------------------*/
 /* Desktop version              */
 /*------------------------------*/
+
+.hero {
+  background-image: url("../assets/shibuya-horisontal.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::before {
+  content: ""; /* Overlay effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #c800ff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}

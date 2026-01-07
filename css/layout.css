@@ -34,6 +34,11 @@ li {
   margin: 0.6rem auto;
 }
 
+#om-mig {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 /*------------------------------*/
 /* Mobil version                */
 /*------------------------------*/
@@ -58,5 +63,10 @@ li {
 
   .nav-menu.active {
     left: 0;
+  }
+
+  #om-mig {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
