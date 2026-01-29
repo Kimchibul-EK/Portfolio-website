@@ -1,54 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <title>Kimchi - Kim Eksamen</title>
+    <link rel="icon" href="/assets/mini-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim Ulstrup Portfolioeksamen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Bangers&family=Catamaran:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/layout.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <a href="./forside.html" class="nav-logo"><img src="/assets/logo.svg" alt="" /></a>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="./om-mig.html" class="nav-link">Om mig</a>
-          </li>
-          <li class="nav-item">
-            <a href="intro.html" class="nav-link">Introforløb</a>
-          </li>
-          <li class="nav-item">
-            <a href="./web.html" class="nav-link">Web</a>
-          </li>
-          <li class="nav-item">
-            <a href="./uxui.html" class="nav-link">UX</a>
-          </li>
-          <li class="nav-item">
-            <a href="./content.html" class="nav-link">UI & Content</a>
-          </li>
-        </ul>
+      <nav class="nav-hovedmenu">
+        <a href="./forside.html" class="nav-logo"><img src="/assets/logo.svg" alt="Forside" /></a>
+        <div class="nav-menucontainer">
+          <ul class="nav-menupunkter">
+            <li class="nav-menupunkt">
+              <a href="./om-mig.html" class="nav-link">Om mig</a>
+            </li>
+            <li class="nav-menupunkt">
+              <a href="intro.html" class="nav-link">Introforløb</a>
+            </li>
+            <li class="nav-menupunkt">
+              <a href="./web.html" class="nav-link">Web</a>
+            </li>
+            <li class="nav-menupunkt">
+              <a href="./uxui.html" class="nav-link">UX</a>
+            </li>
+            <li class="nav-menupunkt">
+              <a href="./content.html" class="nav-link">UI & Content</a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="dark-mode-toggle">
+          <input type="checkbox" id="dark-mode-toggle" />
+          <label for="dark-mode-toggle">Dark Mode</label>
+        </div> -->
+        <div class="dark-mode">
+          <select id="dark-theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
         <div class="hamburger-menu">
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Top bar  -->
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Middle bar -->
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Bottom bar -->
         </div>
       </nav>
     </header>
     <main>
-      <section class="hero">
-        <div class="hero-content">
+      <section class="hero-section">
+        <!-- <div class="hero-text">
           <h1>Velkommen til Kimchibul</h1>
           <p>Portfolioeksamen for Kim Ulstrup</p>
-          <div class="hero-buttons">
-            <a href="./intro.html" class="btn btn-primary">Gå til Introforløb</a>
-            <a href="./om-mig.html" class="btn btn-secondary">Om mig</a>
+          <div class="hero-continue-frame">
+            <a href="#" class="continue-button">Tryk here for at fortsætte</a>
           </div>
+        </div> -->
+        <div class="hero-selection">
+          <img id="om-mig-hero" src="/assets/forside/paper-me.webp" alt="Om mig" />
+          <img id="intro-hero" src="/assets/forside/paper-money.webp" alt="Introforløb" />
+          <img id="web-hero" src="/assets/forside/paper-briefcase.webp" alt="Web" />
+          <img id="uxui-hero" src="/assets/forside/paper-figure.webp" alt="UX" />
+          <img id="content-hero" src="/assets/forside/paper-ramen.webp" alt="UI & Content" />
         </div>
       </section>
     </main>
-    <script src="../javascript/navmenu.js"></script>
+    <script src="../javascript/script.js" defer></script>
   </body>
 </html>

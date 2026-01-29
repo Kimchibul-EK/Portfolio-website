@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
@@ -7,84 +7,41 @@
     <link rel="stylesheet" href="../css/layout.css" />
   </head>
   <body>
-     <header>
-      <nav class="navbar">
+    <header>
+      <nav class="nav-hovedmenu">
         <a href="./forside.html" class="nav-logo"><img src="/assets/logo.svg" alt="" /></a>
-        <ul class="nav-menu">
-          <li class="nav-item">
+        <ul class="nav-menupunkter">
+          <li class="nav-menupunkt">
             <a href="./om-mig.html" class="nav-link">Om mig</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-menupunkt">
             <a href="intro.html" class="nav-link">Introforløb</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-menupunkt">
             <a href="./web.html" class="nav-link">Web</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-menupunkt">
             <a href="./uxui.html" class="nav-link">UX</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-menupunkt">
             <a href="./content.html" class="nav-link">UI & Content</a>
           </li>
         </ul>
+        <div class="dark-mode-toggle">
+          <input type="checkbox" id="dark-mode-checkbox" />
+          <label for="dark-mode-checkbox" class="dark-mode-label">Dark Mode</label>
+        </div>
         <div class="hamburger-menu">
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Top bar  -->
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Middle bar -->
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Bottom bar -->
         </div>
       </nav>
     </header>
-    <main id="om-mig" class="content-main">
-      <section class="intro">
-        <h1>Om mig</h1>
-        <p>
-          Mit navn er Kim Ulstrup, og jeg er multimediedesignstuderende med særlig interesse for
-          webdesign. Jeg arbejder bedst der hvor design og kode mødes, og kan godt lide at fordybe
-          mig i både det visuelle udtryk og den tekniske opbygning af et website.
-        </p>
-      </section>
-    </section><img src="/assets/about-me.webp" alt="Kim Ulstrup" class="profile-img"></section>
-      <section class="erfaring">
-        <h2>Erfaring fra 1. semester</h2>
-        <p>
-          Første semester har givet mig en solid grundforståelse for designprocesser, UX/UI og
-          webudvikling. Jeg er blevet mere bevidst om mine designvalg og har lært at arbejde mere
-          struktureret med både idéudvikling og implementering.
-        </p>
-      </section>
-
-      <section class="skills">
-        <h2>Kompetencer</h2>
-        <ul>
-          <li>HTML &amp; CSS - grundlæggende frontend og responsivt layout</li>
-          <li>UX/UI - research, styletiles, wireframes og prototyper</li>
-          <li>Figma - design, prototyper og mockups</li>
-          <li>Photoshop &amp; Illustrator - billedbehandling og grafik</li>
-          <li>After Effects - simple animationer og motion</li>
-          <li>GitHub - versionsstyring og workflow</li>
-        </ul>
-      </section>
-
-      <section class="interesser">
-      <h2>Interesser</h2>
-      <p>Webdesign, japansk kultur og sprog, gaming, tech og lækker mad.</p>
-      </section>
-
-      <section class="kontakt">
-      <h2>Kontakt</h2>
-      <ul>
-        <li>📧 Email: kiul0001@stud.ek.dk</li>
-        <li>🕊 Brevdue modtages efter forudgående aftale.</li>
-        <li>📠 Fax: +101 67 69 420</a></li>
-      </ul>
-      </section>
-      <div class="next-link">
-        <a href="./intro.html" class="nav-link">Næste: Introforløb</a>
-      </div>
-    </main>
-    <script src="../javascript/navmenu.js"></script>
+    <main></main>
+    <script src="../javascript/script.js"></script>
   </body>
 </html>

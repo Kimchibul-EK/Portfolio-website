@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
@@ -8,166 +8,36 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="nav-hovedmenu">
         <a href="./forside.html" class="nav-logo"><img src="/assets/logo.svg" alt="" /></a>
-        <ul class="nav-menu">
-          <li class="nav-item">
+        <ul class="nav-alle_menupunkter">
+          <li class="nav-alle_menupunkter">
             <a href="./om-mig.html" class="nav-link">Om mig</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-alle_menupunkter">
             <a href="intro.html" class="nav-link">Introforløb</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-alle_menupunkter">
             <a href="./web.html" class="nav-link">Web</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-alle_menupunkter">
             <a href="./uxui.html" class="nav-link">UX</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-alle_menupunkter">
             <a href="./content.html" class="nav-link">UI & Content</a>
           </li>
         </ul>
         <div class="hamburger-menu">
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Top bar  -->
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Middle bar -->
-          <span class="hamburger-bar"></span>
+          <span class="hamburger-part"></span>
           <!-- Bottom bar -->
         </div>
       </nav>
     </header>
-    <main id="tema-2-grundlaeggende-web" class="content-main">
-      <h1>Tema 2 - Grundlæggende Web</h1>
-
-      <p>
-        Tema 2 introducerede os til nogle af de vigtigste værktøjer og begreber på
-        multimediedesigneruddannelsen: HTML, gitHub og CSS. Vi oprettede en GitHub, som vi skulle
-        bruge til at hoste alle fremtidige gitHub projekter, men mest af alt øvede vi HTML og CSS
-        til bearbejdelse af tekst, billedbehandling og layout.
-      </p>
-
-      <h2>Studiestartprøven – Side om computere</h2>
-
-      <figure style="grid-column: 1 / -1">
-        <img src="../assets/tema 2/studiestartsprove-website.png" alt="Studiestartprøven website" />
-        <figcaption>Figur 1 – Studiestartprøven</figcaption>
-      </figure>
-
-      <p>
-        <a href="https://kimchibul-ek.github.io/MMD-First/website/site/index.html">
-          https://kimchibul-ek.github.io/MMD-First/website/site/index.html
-        </a>
-      </p>
-
-      <h2>Opgaven</h2>
-
-      <p>
-        Studiestartsprøven bestod i at kode vores første responsive hjemmeside, som skulle være
-        ”responsive”, dvs. tilpasse sig forskellige skærmstørrelser. Opgaven tog udgangspunkt i en
-        udleveret wireframe og et layoutdiagram, som fastlagde sidens struktur og opbygning.
-      </p>
-
-      <p>
-        Alt indhold i form af tekst og billeder blev også udleveret, og skulle indgå som en del af
-        besvarelsen. Opgaven bestod derfor primært i at kode siden korrekt samt træffe valg omkring
-        typografi og visuel styling. Derudover blev vi introduceret til W3C’s valideringsservice:
-        ttps://validator.w3.org, som siden skulle overholde for at sikre korrekt og standardiseret
-        HTML- og CSS-kode.
-      </p>
-
-      <h2>Arbejdsproces</h2>
-
-      <p>
-        Projektet blev først oprettet på GitHub:
-        <a href="https://github.com/Kimchibul-EK/MMD-First">
-          https://github.com/Kimchibul-EK/MMD-First </a
-        >, hvor jeg løbende brugte push til at gemme mit arbejde og holde styr på ændringer
-        undervejs. Jeg inkorporerede en .gitignore fil for at undgå uønskede at unønskede .DS_store
-        filer blev uploadet til git, da jeg arbejdede på en MacBook.
-      </p>
-
-      <figure style="grid-column: 1 / -1">
-        <img src="../assets/tema 2/vs-code-opbygning.png" alt="VS Code opbygning" />
-        <figcaption>Figur 2 - VS Code Opbygning</figcaption>
-      </figure>
-
-      <p>
-        Jeg tog udgangspunkt i den udleverede wireframe og layoutdiagram og startede med at
-        analysere det udlevere content. Ud fra det opbyggede jeg den grundlæggende HTML-struktur,
-        efter hvad der ifølge min analyse gav mening. Jeg brugte VS Code, hvor jeg skrev al min
-        kode, og via HTML fordelte indholdet på de sider der var nævnt i layoutdiagrammet.
-      </p>
-
-      <p>
-        Herefter arbejdede jeg med CSS, hvor jeg lavede to stylesheets. Et til at varetage siden
-        styling, og en anden til at holde styr på layoutet. I begge filer gjorde jeg det til en vane
-        at bruge noter hyppigt, så jeg nemmere kunne holde styr på min kode. Til Layout brugte jeg
-        både Grid og Flexbox afhængigt af layoutets behov. Grid blev primært brugt til den
-        overordnede layoutstrukturer, imens Flexbox blev brugt til navigation og kolonneopbygning.
-        Jeg arbejdede også bevidst med genbrug af CSS-classes for at holde koden mere overskuelig og
-        undgå gentagelser.
-      </p>
-
-      <pre>
-@media (max-width: 762px) and (min-width: 485px) {
- body {
- padding-top: 8em;
- padding-left: 1.5em;
- padding-right: 1.5em;
- }
-}
-  </pre
-      >
-
-      <p>
-        For at gøre siden responsiv brugte jeg media queries for at sikre, at layoutet tilpassede
-        sig forskellige skærmstørrelser. Jeg testede siden løbende ved at ændre viewport-størrelsen.
-      </p>
-
-      <p>
-        Til typografi brugte jeg FontJoy: link til at finde fontkombinationer, der fungerede godt
-        sammen. Det visuelle udtryk blev inspireret af Apples hjemmeside, især i forhold til
-        farvevalg og et rent, enkelt layout.
-      </p>
-
-      <p>
-        Under kodningen arbejdede jeg også med hover states, responsiv navigation og styling af
-        menuen. Menuen gav særligt udfordringer, blandt andet i forhold til at skabe tydelige linjer
-        mellem menupunkterne, samtidig med at de skulle være responsiv.
-      </p>
-
-      <h2>Læring</h2>
-
-      <p>
-        Forløbet gav mig en grundlæggende, men vigtig forståelse for, hvordan HTML og CSS hænger
-        sammen i praksis. Et konkret eksempel er arbejdet med navigationen, hvor jeg oplevede, at
-        noget, der virker simpelt visuelt, hurtigt bliver komplekst når det skal kode fra bunden.
-      </p>
-
-      <p>
-        Jeg lærte også meget af at arbejde med Grid og Flexbox og blev mere bevidst om, hvornår det
-        ene redskab bør bruges i forhold end det andet. Samtidig fik jeg erfaring med at organisere
-        kode og bruge media queries.
-      </p>
-
-      <p>
-        Den største udfordring i forløbet var tidsstyring. Jeg har kom til at vente til aller sidst,
-        for så at finde ud af at der faktisk var mere at lave end jeg først havde regnet med. I dag
-        kan jeg se, at jeg med fordel kunne have brugt et værktøj som Trello: link til at opdele
-        opgaven i mindre delopgaver og skabe bedre overblik over processen.
-      </p>
-
-      <p>
-        En tydelig forbedring til mobilversionen, kunne være navigationen, som fylder en stor del af
-        skærmen. I dag ville jeg sandsynligvis vælge en burger-menu for at spare plads og skabe en
-        mere brugervenlig oplevelse. Samlet set har forløbet givet mig en solid introduktion til
-        kodning af hjemmesider.
-      </p>
-      <div class="next-link">
-        <a href="./uxui.html" class="nav-link">Næste: UX</a>
-      </div>
-    </main>
-    <script src="../javascript/navmenu.js"></script>
+    <main></main>
+    <script src="../javascript/script.js"></script>
   </body>
 </html>

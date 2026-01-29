@@ -1,33 +1,13 @@
-# Dependencies
-node_modules/
-package-lock.json
-yarn.lock
-
-# Build files
-dist/
-build/
-*.bundle.js
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
+# Systemfiler
 .DS_Store
 Thumbs.db
 
-# Environment
-.env
-.env.local
-.env.*.local
+# Editor-mapper (valgfrit men ok)
+.vscode/
+.idea/
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-
-# Misc
-.cache/
-.temp/
+# Videofiler
+*.mp4
+*.mov
+*.avi
+*.mkv

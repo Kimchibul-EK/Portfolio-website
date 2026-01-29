@@ -2,6 +2,16 @@
 /* Universelle                  */
 /*------------------------------*/
 
+:root {
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 6rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +22,14 @@ li {
   list-style: none;
 }
 
-.navbar {
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-right: 1rem;
+}
+
+.nav-hovedmenu {
   min-height: 4rem;
   display: flex;
   justify-content: space-between;
@@ -20,23 +37,95 @@ li {
   padding: 0 1.5rem;
 }
 
-.nav-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5rem;
+.nav-menucontainer {
+  margin-left: auto;
 }
 
-.hamburger-bar {
+/* Dark mode toggle container */
+.dark-mode {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+.hamburger-part {
   display: block; /*stacks bars vertically*/
   width: 2.5rem;
   height: 0.3rem;
   margin: 0.6rem auto;
 }
 
-#om-mig {
+/*------------------------------*/
+/* Desktop                      */
+/*------------------------------*/
+
+.nav-menupunkter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-selection > * {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block; /* Remove bottom whitespace */
+  justify-self: center;
+  align-self: center;
+}
+
+.hero-selection {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  min-height: 100vh;
+  width: 90vw;
+  max-width: 1200px;
+  padding-top: var(--space-xl);
+}
+
+#om-mig-hero {
+  grid-column: 2 / 4; /* Centered in the grid */
+  grid-row: 1 / -1;
+}
+
+#intro-hero {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#web-hero {
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+}
+
+#uxui-hero {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#content-hero {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
 }
 
 /*------------------------------*/
@@ -47,7 +136,7 @@ li {
     display: block; /* Show hamburger menu on mobile */
   }
 
-  .nav-menu {
+  .nav-menupunkter {
     position: fixed;
     top: 4rem;
     left: -100%;
@@ -57,16 +146,66 @@ li {
     text-align: center;
   }
 
-  .nav-item {
+  .nav-menupunkt {
     margin: 1rem 0;
   }
 
-  .nav-menu.active {
+  .nav-menupunkter.active {
     left: 0;
   }
 
-  #om-mig {
-    display: grid;
-    grid-template-columns: 1fr;
+  .dark-mode {
+    padding-right: var(--space-m);
   }
 }
+
+@media (max-width: 600px) {
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    max-height: 100vh;
+    padding-top: var(--space-xl);
+  }
+  .hero-selection {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1.5fr auto;
+    max-height: 100%;
+  }
+
+  .hero-selection > * {
+    min-width: 30vh;
+    display: block;
+    object-fit: contain;
+    justify-self: center;
+    align-self: center;
+  }
+
+  #om-mig-hero {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    max-height: 60vh;
+  }
+
+  #intro-hero {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #web-hero {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  #uxui-hero {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  #content-hero {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
+/*------------------------------*/
+/* Forside                      */
+/*------------------------------*/
