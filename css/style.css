@@ -18,6 +18,45 @@ based on user preference  */
   --kimchi_purple: light-dark(#d29afc, #bea3d2);
 }
 
+/*------------------------------*/
+/* Animations                   */
+/*------------------------------*/
+
+.wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+.hide {
+  visibility: hidden;
+}
+
+/*------------------------------*/
+/* Keyframes                    */
+/*------------------------------*/
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+
+  30% {
+    transform: rotate(2deg);
+  }
+
+  40% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
 body {
   font-family: "Catamaran", sans-serif;
 
@@ -67,8 +106,32 @@ a {
   transition: all 0.3s ease;
 }
 
+/*------------------------------*/
+/* Herosite                     */
+/*------------------------------*/
+
 .hero-section {
   background-image: url("/assets/forside/shibuya-horisontal.webp");
+}
+
+#om-mig-hero > img:hover {
+  content: url("/assets/forside/paper-me-hover.webp");
+}
+
+#intro-hero img:hover {
+  content: url("/assets/forside/paper-money-hover.webp");
+}
+
+#web-hero:hover {
+  content: url("/assets/forside/paper-briefcase-hover.webp");
+}
+
+#uxui-hero:hover {
+  content: url("/assets/forside/paper-figure-hover.webp");
+}
+
+#content-hero:hover {
+  content: url("/assets/forside/paper-ramen-hover.webp");
 }
 
 /*------------------------------*/
