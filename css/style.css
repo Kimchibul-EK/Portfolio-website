@@ -117,23 +117,23 @@ a {
 .hero-section {
   background-image: url("/assets/forside/shibuya-horisontal.webp");
 }
-#om-mig-hero:hover {
+#om-mig-hero:hover img {
   content: url("/assets/forside/paper-me-hover.webp");
 }
 
-#intro-hero:hover {
+#intro-hero:hover img {
   content: url("/assets/forside/paper-money-hover.webp");
 }
 
-#web-hero:hover {
+#web-hero:hover img {
   content: url("/assets/forside/paper-briefcase-hover.webp");
 }
 
-#uxui-hero:hover {
+#uxui-hero:hover img {
   content: url("/assets/forside/paper-figure-hover.webp");
 }
 
-#content-hero:hover {
+#content-hero:hover img {
   content: url("/assets/forside/paper-ramen-hover.webp");
 }
 

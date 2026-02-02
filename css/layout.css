@@ -87,15 +87,6 @@ li {
   background-repeat: no-repeat;
 }
 
-.hero-selection > img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block; /* Remove bottom whitespace */
-  justify-self: center;
-  align-self: center;
-}
-
 .hero-selection {
   display: grid;
   justify-content: center;
@@ -106,6 +97,18 @@ li {
   width: 70vw;
   max-width: 1200px;
   min-width: 768px;
+}
+
+.hero-selection > a {
+  display: inline-block;
+  justify-self: center;
+  align-self: center;
+}
+
+.hero-selection > a > img {
+  display: block; /* Remove bottom whitespace */
+  max-width: 100%;
+  height: auto;
 }
 
 #om-mig-hero {
