@@ -7,7 +7,7 @@ based on user preference  */
 
 :root {
   color-scheme: light dark;
-  --nav_background: light-dark(hsl(0, 0%, 29%), hsl(0, 0%, 29%));
+  --nav_background: light-dark(hsl(0, 0%, 18%), hsl(0, 0%, 18%));
   --nav_text: light-dark(#e7e7e7, #e7e7e7);
   --kimchi_black: light-dark(#303030, #e7e7e7);
   --kimchi_white: light-dark(#e7e7e7, #303030);
@@ -23,14 +23,14 @@ based on user preference  */
 /*------------------------------*/
 
 .wiggle {
-  animation: wiggle 1s ease-in-out infinite;
+  animation: wiggle 10s ease-in-out infinite;
 }
 .hide {
   visibility: hidden;
 }
 
 /*------------------------------*/
-/* Keyframes                    */
+/* Herosite Animations.         */
 /*------------------------------*/
 
 @keyframes wiggle {
@@ -62,6 +62,10 @@ body {
 
   background-color: var(--kimchi_white); /* Light gray background */
 }
+
+/*------------------------------*/
+/* Navigation                   */
+/*------------------------------*/
 
 header {
   background-color: var(--nav_background);
@@ -113,12 +117,11 @@ a {
 .hero-section {
   background-image: url("/assets/forside/shibuya-horisontal.webp");
 }
-
-#om-mig-hero > img:hover {
+#om-mig-hero:hover {
   content: url("/assets/forside/paper-me-hover.webp");
 }
 
-#intro-hero img:hover {
+#intro-hero:hover {
   content: url("/assets/forside/paper-money-hover.webp");
 }
 

@@ -24,6 +24,10 @@ li {
   list-style: none;
 }
 
+/*------------------------------*/
+/* Navigation                     */
+/*------------------------------*/
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -58,16 +62,16 @@ li {
   margin: 0.6rem auto;
 }
 
-/*------------------------------*/
-/* Desktop                      */
-/*------------------------------*/
-
 .nav-menupunkter {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
 }
+
+/*------------------------------*/
+/* Herosite                     */
+/*------------------------------*/
 
 .hero-section {
   display: flex;
@@ -83,7 +87,7 @@ li {
   background-repeat: no-repeat;
 }
 
-.hero-selection > * {
+.hero-selection > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -139,7 +143,7 @@ li {
 
   .nav-menupunkter {
     position: fixed;
-    top: 4rem;
+    top: 3.5rem;
     left: -100%;
     gap: 0;
     flex-direction: column;
