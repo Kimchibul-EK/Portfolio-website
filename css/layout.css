@@ -14,6 +14,12 @@
   --space-xxl: 6rem;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 * {
   margin: 0;
   padding: 0;

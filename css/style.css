@@ -18,16 +18,73 @@ based on user preference  */
   --kimchi_purple: light-dark(#d29afc, #bea3d2);
 }
 
+body {
+  font-family: "Catamaran", sans-serif;
+  background-color: var(--kimchi_); /* Light gray background */
+}
+
 h1 {
   font-family: "Bangers", sans-serif;
   font-size: 3rem;
   color: var(--kimchi_pink);
-  text-shadow: var(--kimchi_green) 0.1rem 0.2rem;
-  -webkit-text-stroke: 0.01rem var(--nav_background);
+  text-shadow: var(--kimchi_turquoise) 0.1rem 0.2rem;
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.25); /* stroke for better readability */
+}
+
+h2 {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 2rem;
+  color: var(--kimchi_turquoise);
+  text-shadow: var(--kimchi_purple) 0.1rem 0.2rem;
+  -webkit-text-stroke: 1px rgba(28, 26, 26, 0.25); /* stroke for better readability */
+}
+
+p {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.2rem;
+  max-width: 69ch; /* optimal line length for readability */
+  color: var(--kimchi_black);
+}
+
+aside {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--kimchi_white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+aside > * {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1rem;
+  color: var(--kimchi_black);
+  max-width: 100ch;
+  text-align: center;
+  margin: auto;
+}
+
+aside div:first-child {
+  font-family: "Bangers", sans-serif;
+  font-size: 1.2rem;
+  color: var(--kimchi_green);
+  text-shadow: var(--kimchi_lavender) 0.1rem 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  -webkit-text-stroke: 0.25px rgba(28, 26, 26, 0.25); /* stroke for better readability */
+}
+
+#about-me-image-section {
+  width: 100%;
+}
+
+#about-me-image-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* manuel import fordi den anden ikke virkede */
-@font-face {
+/* @font-face {
   font-family: "Archivo Narrow";
   font-style: normal;
   font-weight: 400 700;
@@ -43,7 +100,7 @@ h1 {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/archivonarrow/v35/tss2ApVBdCYD5Q7hcxTE1ArZ0bb1uX563v0qNxg.woff2)
     format("woff2");
-}
+} */
 
 /*------------------------------*/
 /* Ikoner                       */
@@ -134,20 +191,12 @@ h1 {
   }
 }
 
-body {
-  font-family: "Catamaran", sans-serif;
-  background-color: var(--kimchi_); /* Light gray background */
-}
-
 /*------------------------------*/
 /* Navigation                   */
 /*------------------------------*/
 
 header {
   background-color: var(--nav_background);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .nav-hovedmenu a {
