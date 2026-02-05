@@ -31,10 +31,6 @@ aside {
 }
 
 .content-description p {
-  margin-top: 0; /* fjern content description margin top */
-}
-
-.medie-blok .content-description p {
   text-align: center;
   margin: 0 auto; /* auto på left/right = centrer max-width-blokken */
 }
