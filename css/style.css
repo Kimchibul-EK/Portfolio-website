@@ -35,8 +35,15 @@ h2 {
   font-family: "Archivo Narrow", sans-serif;
   font-size: 2rem;
   color: var(--kimchi_turquoise);
-  text-shadow: var(--kimchi_purple) 0.1rem 0.2rem;
-  -webkit-text-stroke: 1px rgba(28, 26, 26, 0.25); /* stroke for better readability */
+  text-shadow: var(--kimchi_lavender) 0.15rem 0.15rem;
+  -webkit-text-stroke: 0.25px rgba(0, 0, 0, 0.5); /* stroke for better readability */
+}
+
+h3 {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.5rem;
+  color: var(--kimchi_turquoise);
+  text-shadow: var(--kimchi_lavender) 0.12rem 0.12rem;
 }
 
 p {
@@ -47,8 +54,6 @@ p {
 }
 
 aside {
-  width: 100%;
-  padding: 1.5rem;
   background-color: var(--kimchi_white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
@@ -62,15 +67,23 @@ aside > * {
   margin: auto;
 }
 
-aside div:first-child {
+aside div:first-child,
+details > summary {
   font-family: "Bangers", sans-serif;
   font-size: 1.2rem;
   color: var(--kimchi_green);
   text-shadow: var(--kimchi_lavender) 0.1rem 0.1rem;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 0.5rem;
-  -webkit-text-stroke: 0.25px rgba(28, 26, 26, 0.25); /* stroke for better readability */
+  -webkit-text-stroke: 0.25px rgba(28, 26, 26, 0.25);
+}
+
+details > summary {
+  cursor: pointer;
+  background-color: var(--kimchi_white);
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0.5rem;
 }
 
 #about-me-image-section {
@@ -81,6 +94,23 @@ aside div:first-child {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.content-description p {
+  font-size: 1 rem;
+  font-style: italic;
+  margin-top: 0; /* fjern content description margin top */
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--kimchi_pink);
+  margin: 1rem;
 }
 
 /* manuel import fordi den anden ikke virkede */
@@ -239,9 +269,9 @@ header {
   margin: 1rem auto 1rem auto;
   font-size: 1.25rem;
   padding: 0.75rem 1.5rem;
-  border: 0.2rem solid var(--nav_background);
+  border: 0.1rem solid var(--kimchi_black);
   border-radius: 0.5rem;
-  background: var(--kimchi_pink);
+  background: linear-gradient(to bottom, var(--kimchi_pink), var(--kimchi_turquoise));
   box-shadow: 0 4px 8px rgba(2, 2, 2, 0.2);
   color: var(--nav_background);
   text-decoration: none;
@@ -252,9 +282,10 @@ header {
 }
 
 .next-pre-knap:hover {
-  background: var(--kimchi_lavender);
+  background: linear-gradient(to bottom, var(--kimchi_lavender), var(--kimchi_green));
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(2, 2, 2, 0.3);
+  color: var(--kimchi_black);
 }
 
 /*------------------------------*/
