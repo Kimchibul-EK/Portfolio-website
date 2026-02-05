@@ -33,6 +33,17 @@ aside {
 .content-description p {
   margin-top: 0; /* fjern content description margin top */
 }
+
+.medie-blok .content-description p {
+  text-align: center;
+  margin: 0 auto; /* auto på left/right = centrer max-width-blokken */
+}
+
+.medie-blok {
+  width: 69vw; /* styrer bredden for både billede/embed + tekst */
+  margin: 2rem auto; /* centrer + lidt luft under blokken */
+}
+
 /*------------------------------*/
 /* Navigation                   */
 /*------------------------------*/
@@ -149,15 +160,15 @@ aside {
 /* YouTube Embed                */
 /*------------------------------*/
 
-.youtube-embed {
-  grid-column: 1 / -1;
+.medie-blok .youtube-embed {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
 }
 
-.youtube-embed iframe {
+/* YouTube iframe skalerer inde i sin container */
+.medie-blok .youtube-embed iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -166,32 +177,62 @@ aside {
 }
 
 /*------------------------------*/
-/* Image Carousel               */
+/* Image Embed & Carousel       */
 /*------------------------------*/
 
-.image-carousel {
+/*landscape version*/
+.medie-blok .image-carousel,
+.medie-blok .image-wrapper {
   position: relative;
-  width: 60vw;
-  margin: 0 auto;
+  width: 100%;
   aspect-ratio: 16 / 9;
+  margin: 0 auto;
 }
 
-.carousel-item {
+.medie-blok img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* portrait version */
+.medie-blok .image-carousel.portrait {
+  aspect-ratio: 3 / 4;
+  max-height: 600px;
+  width: 100%;
+}
+
+.medie-blok .image-carousel.portrait {
+  aspect-ratio: 3 / 4;
+  max-height: 600px;
+  width: auto;
+}
+
+/* Slides inde i carousel */
+.medie-blok .carousel-item {
   position: absolute;
   inset: 0;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.carousel-item.active {
+.medie-blok .carousel-item.active {
   opacity: 1;
 }
 
-.carousel-item img {
+.medie-blok .carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.medie-blok .image-carousel.portrait img {
+  max-height: 600px;
+  width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 /*------------------------------*/
@@ -229,9 +270,7 @@ aside {
     min-width: auto;
   }
 
-  .image-carousel {
-    width: 80vw;
-    margin: 0 auto;
-    aspect-ratio: 16 / 9;
+  .medie-blok {
+    width: 80vw; /* styrer bredden for både billede/embed + tekst */
   }
 }

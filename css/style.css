@@ -103,14 +103,13 @@ li {
 .content-description p {
   font-size: 1 rem;
   font-style: italic;
-  margin-top: 0; /* fjern content description margin top */
 }
 
 hr {
   border: none;
   height: 2px;
-  background-color: var(--kimchi_pink);
-  margin: 1rem;
+  background-color: var(--kimchi_purple);
+  margin: 1rem auto 1rem auto;
 }
 
 /* manuel import fordi den anden ikke virkede */

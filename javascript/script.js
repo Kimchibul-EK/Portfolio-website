@@ -80,11 +80,19 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Image Carousel               */
 /*------------------------------*/
 
-const images = document.querySelectorAll(".carousel-item");
-let current = 0;
+// find alle carouseller på siden
+const carousels = document.querySelectorAll(".image-carousel");
 
-setInterval(() => {
-  images[current].classList.remove("active");
-  current = (current + 1) % images.length;
-  images[current].classList.add("active");
-}, 7000);
+carousels.forEach((carousel) => {
+  const images = carousel.querySelectorAll(".carousel-item");
+  if (images.length === 0) return;
+
+  let current = 0;
+  images[current].classList.add("active"); // vis første slide i DENNE carousel
+
+  setInterval(() => {
+    images[current].classList.remove("active");
+    current = (current + 1) % images.length; // gå til næste slide, loop tilbage til start
+    images[current].classList.add("active");
+  }, 5000);
+});
