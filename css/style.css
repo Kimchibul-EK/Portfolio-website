@@ -101,13 +101,14 @@ li {
 }
 
 .content-description p {
-  font-size: 1 rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
 hr {
   border: none;
-  height: 2px;
+  height: 0.2rem;
+  width: 40vw;
   background-color: var(--kimchi_purple);
   margin: 1rem auto 1rem auto;
 }
@@ -314,6 +315,53 @@ header {
   content: url("/assets/forside/paper-ramen-hover.webp");
 }
 
+/*------------------------------*/
+/* Kode styling              */
+/*------------------------------*/
+/* Centrer kodeblokken på siden */
+.kode-blok {
+  position: relative;
+  width: fit-content;
+  max-width: 100ch;
+  margin: 0 auto;
+  background-color: var(--kimchi_white);
+  border-radius: 0.5rem;
+}
+
+/* Label i øverste venstre hjørne */
+.kode-blok::before {
+  content: attr(data-lang);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--kimchi_green);
+  color: var(--nav_background);
+  font-family: "Bangers", sans-serif;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* Pre = selve boksen */
+.kode-blok pre {
+  margin: 0;
+  padding: 1.75rem 1rem 1rem; /* plads til label */
+  overflow-x: auto;
+  text-align: left; /* 👈 tekst mod venstre */
+}
+
+/* Code = teksten */
+.kode-blok code {
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--kimchi_black);
+
+  /* reset AL styling der kan arves */
+  text-transform: none;
+  text-shadow: none;
+  letter-spacing: normal;
+}
 /*------------------------------*/
 /* Mobil version                */
 /*------------------------------*/

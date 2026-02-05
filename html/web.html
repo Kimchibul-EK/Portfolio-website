@@ -59,12 +59,208 @@
       </nav>
     </header>
     <main>
-      <div>
-        <a href="/html/intro.html" class="next-pre-knap">Forrige: Introforløb</a>
-      </div>
-      <div>
-        <a href="/html/uxui.html" class="next-pre-knap">Næste: UX/UI</a>
-      </div>
+      <section class="main-content">
+        <h1>Webudvikling</h1>
+        <h3>Tema 2</h3>
+        <p>
+          Temaet introducerede os til nogle af de vigtigste værktøjer og begreber på
+          multimediedesigneruddannelsen: HTML, gitHub og CSS. Vi oprettede en GitHub, som vi skulle
+          bruge til at hoste alle fremtidige gitHub projekter, men mest af alt øvede vi HTML og CSS
+          til bearbejdelse af tekst, billedbehandling og layout.
+        </p>
+        <hr />
+      </section>
+      <section class="main-content">
+        <section>
+          <h2>Studiestartsprøven</h2>
+
+          <div class="medie-blok">
+            <div class="image-wrapper">
+              <img
+                src="/assets/web/studiestartsprove-website.png.webp"
+                alt="Studiestartprøven – responsiv side om computere"
+              />
+            </div>
+            <div class="content-description">
+              <p>
+                Mit bud på studiestartsprøven var denne responsive side om computere. Klik
+                <a href="https://kimchibul-ek.github.io/MMD-First/website/site/index.html">her</a>
+                for at gå til siden.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Opgavebeskrivelse</h3>
+          <p>
+            Studiestartsprøven bestod i at kode vores første responsive hjemmeside, dvs. tilpasse
+            sig forskellige skærmstørrelser. Opgaven tog udgangspunkt i en udleveret wireframe og et
+            layoutdiagram, som fastlagde sidens struktur og opbygning.
+          </p>
+          <p>
+            Alt indhold i form af tekst og billeder blev også udleveret, og skulle indgå som en del
+            af besvarelsen. Opgaven bestod derfor primært i at kode siden korrekt samt træffe valg
+            omkring typografi og visuel styling. Derudover blev vi introduceret til
+            <a href="https://validator.w3.org"> W3C’s valideringsservice </a>, som siden skulle
+            overholde for at sikre korrekt og standardiseret HTML- og CSS-kode.
+          </p>
+        </section>
+        <section>
+          <h3>Arbejdsproces</h3>
+          <p>
+            Projektet blev først oprettet på
+            <a href="https://github.com/Kimchibul-EK/MMD-First">GitHub</a>, hvor jeg løbende brugte
+            push til at gemme mit arbejde og holde styr på ændringer undervejs. Jeg inkorporerede en
+            .gitignore fil for at undgå uønskede .DS_Store filer blev uploadet til git, da jeg
+            arbejdede på en MacBook.
+          </p>
+          <div class="medie-blok">
+            <div class="image-wrapper">
+              <img
+                src="/assets/web/vs-code-opbygning.webp"
+                alt="Strukturering af siden i VS Code."
+              />
+            </div>
+            <div class="content-description">
+              <p>Strukturering af siden i VS Code og repository.</p>
+            </div>
+          </div>
+
+          <p>
+            Min løsning tog udgangspunkt i den udleverede wireframe og layoutdiagram og startede med
+            at analysere det udlevere content. Ud fra det opbyggede jeg den grundlæggende struktur
+            for projektet, efter hvad der ifølge min analyse gav mening. Jeg brugte VS Code, hvor
+            jeg skrev al min kode, og via HTML fordelte indholdet på de sider der var nævnt i
+            layoutdiagrammet.
+          </p>
+
+          <p>
+            Herefter arbejdede jeg med CSS, hvor jeg lavede to stylesheets. Et til at varetage
+            sidens styling kaldet generel.css, hvor jeg bl.a. valgte sidens tekstformatering og
+            farve. Den anden layout.css brugte jeg til at holde styr på sidens formatering, hvor
+            brugte jeg både Grid, Flexbox og media queries afhængigt af layoutets behov. Det var dem
+            der sammen gjorde min side responsiv. Grid blev primært brugt til den overordnede
+            layoutstruktur, imens Flexbox blev brugt til navigation og kolonneopbygning
+          </p>
+          <details>
+            <summary>Eksempel: Brug af flex til en kolonne opbygning.</summary>
+            <aside>
+              <div class="kode-blok" data-lang="CSS">
+                <pre><code>.flex_col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}</code></pre>
+              </div>
+            </aside>
+          </details>
+
+          <details>
+            <summary>Eksempel: Menuens formatering.</summary>
+            <aside>
+              <div class="kode-blok" data-lang="CSS">
+                <pre><code
+              >.nav-list {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  margin: 0 auto;
+  padding: 0; 
+  max-width: 1200px; 
+}</code
+            ></pre>
+              </div>
+            </aside>
+          </details>
+
+          <details>
+            <summary>Eksempel: Media query til mindre skærmstørrelser.</summary>
+            <aside>
+              <div class="kode-blok" data-lang="CSS">
+                <pre><code>@media (max-width: 762px) and (min-width: 485px) {
+  body {
+    padding-top: 8em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+</code></pre>
+              </div>
+            </aside>
+          </details>
+
+          <p>
+            I begge CSS-filer gjorde jeg det til en vane at bruge kommentarer ofte, så jeg nemmere
+            kunne holde styr på min kode. Jeg arbejdede også bevidst med genbrug af CSS-klasser for
+            at holde koden mere overskuelig og undgå gentagelser. Responsiviteten blev løbende
+            testet ved at ændre viewport-størrelsen i browseren.
+          </p>
+          <p>
+            Til typografi brugte jeg <a href="https://fontjoy.com/">FontJoy</a> til at finde
+            fontkombinationer, der fungerede godt sammen. Det visuelle udtryk blev inspireret af
+            Apples hjemmeside, især i forhold til farvevalg og et rent, enkelt layout.
+          </p>
+
+          <p>
+            Under kodningen arbejdede jeg også med hover states, responsiv navigation og styling af
+            menuen. Menuen gav særligt udfordringer, blandt andet i forhold til at skabe tydelige
+            linjer mellem menupunkterne, samtidig med at de skulle være responsiv.
+          </p>
+
+          <details>
+            <summary>Eksempel: Hover effekt.</summary>
+            <aside>
+              <div class="kode-blok" data-lang="CSS">
+                <pre><code>.nav-list li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.nav-list li a:hover {
+  color: black;
+}
+</code></pre>
+              </div>
+            </aside>
+          </details>
+        </section>
+        <section>
+          <h2>Læring</h2>
+          <p>
+            Forløbet gav mig en grundlæggende, men vigtig forståelse for, hvordan HTML og CSS hænger
+            sammen i praksis. Et konkret eksempel er arbejdet med navigationen, hvor jeg oplevede,
+            at noget, der virker simpelt visuelt, hurtigt bliver komplekst når det skal kode fra
+            bunden.
+          </p>
+          <p>
+            Jeg lærte også meget af at arbejde med Grid og Flexbox og blev mere bevidst om, hvornår
+            det ene redskab bør bruges i forhold end det andet. Samtidig fik jeg erfaring med at
+            organisere kode og bruge media queries.
+          </p>
+          <p>
+            Den største udfordring i forløbet var tidsstyring. Jeg har kom til at vente til aller
+            sidst, for så at finde ud af at der faktisk var mere at lave end jeg først havde regnet
+            med. I dag kan jeg se, at jeg med fordel kunne have brugt et værktøj som
+            <a href="https://trello.com/">Trello</a>
+            til at opdele opgaven i mindre delopgaver og skabe bedre overblik over processen.
+          </p>
+          <p>
+            En tydelig forbedring til mobilversionen, kunne være navigationen, som fylder en stor
+            del af skærmen. I dag ville jeg sandsynligvis bruge en burger-menu for at spare plads og
+            skabe en mere brugervenlig oplevelse. Samlet set har forløbet givet mig en solid
+            introduktion til kodning af hjemmesider.
+          </p>
+        </section>
+        <hr />
+      </section>
+      <section class="direction-knapper">
+        <div>
+          <a href="/html/intro.html" class="next-pre-knap">Forrige: Introforløb</a>
+        </div>
+        <div>
+          <a href="/html/uxui.html" class="next-pre-knap">Næste: UX/UI</a>
+        </div>
+      </section>
     </main>
     <script src="../javascript/script.js"></script>
   </body>

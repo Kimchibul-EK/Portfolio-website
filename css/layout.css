@@ -32,7 +32,7 @@ aside {
 
 .content-description p {
   text-align: center;
-  margin: 0 auto; /* auto på left/right = centrer max-width-blokken */
+  margin: 0.3rem auto; /* auto på left/right = centrer max-width-blokken */
 }
 
 .medie-blok {
@@ -185,12 +185,26 @@ aside {
   margin: 0 auto;
 }
 
-.medie-blok img {
+.medie-blok .image-wrapper {
+  aspect-ratio: auto;
+}
+
+.medie-blok .image-wrapper img {
+  max-width: 100%; /* må gerne blive mindre, men ikke større end originalen */
+  height: auto;
+  width: auto; /* eller bare fjern width helt */
+  object-fit: contain; /* eller fjern helt – vigtigst er at du IKKE bruger cover */
+  display: block;
+  margin: 0 auto; /* hvis du vil centrere billedet horisontalt */
+}
+
+/* denne kode er ikke nødvendig, og skaber faktisk et skaleringsproblem, som jeg ikke helt forstår. Bedst at ignorere den. */
+/* .medie-blok img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
-}
+} */
 
 /* portrait version */
 .medie-blok .image-carousel.portrait {
