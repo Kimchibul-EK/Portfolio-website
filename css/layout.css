@@ -31,6 +31,12 @@ main {
   padding: 0 1.5rem;
 }
 
+#main-forside {
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
 .main-content {
   width: 100%;
   text-align: left;
