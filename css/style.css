@@ -49,8 +49,10 @@ h3 {
 p {
   font-family: "Catamaran", sans-serif;
   font-size: 1.2rem;
-  max-width: 69ch; /* optimal line length for readability */
+  max-width: 69vw;
   color: var(--kimchi_black);
+  margin: 0 auto;
+  text-align: left;
 }
 
 aside {
@@ -265,29 +267,6 @@ header {
   transition: all 0.3s ease;
 }
 
-.next-pre-knap {
-  margin: 1rem auto 1rem auto;
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
-  border: 0.1rem solid var(--kimchi_black);
-  border-radius: 0.5rem;
-  background: linear-gradient(to bottom, var(--kimchi_pink), var(--kimchi_turquoise));
-  box-shadow: 0 4px 8px rgba(2, 2, 2, 0.2);
-  color: var(--nav_background);
-  text-decoration: none;
-  font-family: "Archivo Narrow", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  display: inline-block;
-}
-
-.next-pre-knap:hover {
-  background: linear-gradient(to bottom, var(--kimchi_lavender), var(--kimchi_green));
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(2, 2, 2, 0.3);
-  color: var(--kimchi_black);
-}
-
 /*------------------------------*/
 /* Herosite                     */
 /*------------------------------*/
@@ -362,6 +341,34 @@ header {
   text-shadow: none;
   letter-spacing: normal;
 }
+
+/*------------------------------*/
+/* Direction buttons            */
+/*------------------------------*/
+
+.next-pre-knap {
+  margin: 1rem auto 1rem auto;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  border: 0.1rem solid var(--kimchi_black);
+  border-radius: 0.5rem;
+  background: linear-gradient(to bottom, var(--kimchi_pink), var(--kimchi_turquoise));
+  box-shadow: 0 4px 8px rgba(2, 2, 2, 0.2);
+  color: var(--nav_background);
+  text-decoration: none;
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: inline-block;
+}
+
+.next-pre-knap:hover {
+  background: linear-gradient(to bottom, var(--kimchi_lavender), var(--kimchi_green));
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(2, 2, 2, 0.3);
+  color: var(--kimchi_black);
+}
+
 /*------------------------------*/
 /* Mobil version                */
 /*------------------------------*/

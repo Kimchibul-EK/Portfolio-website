@@ -25,6 +25,17 @@ header {
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+main {
+  max-width: 69vw;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main-content {
+  width: 100%;
+  text-align: left;
+}
+
 aside {
   width: 100%;
   padding: 1.5rem;
@@ -243,6 +254,26 @@ aside {
   width: 100%;
   margin: 0 auto;
   object-fit: contain;
+}
+
+.image-wrapper img.logo {
+  max-width: 300px;
+  height: auto;
+}
+
+/*------------------------------*/
+/* Direction buttons            */
+/*------------------------------*/
+
+.direction-knapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin: 2rem auto;
+}
+
+.direction-knapper > div:only-child {
+  margin: 0 auto;
 }
 
 /*------------------------------*/
