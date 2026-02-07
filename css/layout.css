@@ -348,6 +348,10 @@ h1 {
   .direction-knapper {
     width: 90vw;
   }
+
+  .direction-knapper > div > a {
+    font-size: 1rem;
+  }
 }
 /*------------------------------*/
 /* About Me                     */
