@@ -287,8 +287,8 @@ h1 {
 .direction-knapper {
   display: flex;
   justify-content: space-between;
-  width: 69vw;
-  margin: 2rem auto;
+  width: 100%;
+  margin: 0rem auto;
 }
 
 .direction-knapper > div:only-child {
@@ -346,7 +346,8 @@ h1 {
   }
 
   .direction-knapper {
-    width: 90vw;
+    width: 100%;
+    margin: 1rem auto;
   }
 
   .direction-knapper > div > a {
