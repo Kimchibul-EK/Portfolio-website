@@ -49,9 +49,7 @@ h3 {
 p {
   font-family: "Catamaran", sans-serif;
   font-size: 1.2rem;
-  max-width: 69vw;
   color: var(--kimchi_black);
-  margin: 0 auto;
   text-align: left;
 }
 
@@ -341,10 +339,6 @@ header {
   text-shadow: none;
   letter-spacing: normal;
 }
-
-/*------------------------------*/
-/* Direction buttons            */
-/*------------------------------*/
 
 .next-pre-knap {
   margin: 1rem auto 1rem auto;

@@ -41,6 +41,14 @@ aside {
   padding: 1.5rem;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 1.5rem auto; /* center paragraphs */
+  max-width: 69vw;
+}
+
 .content-description p {
   text-align: center;
   margin: 0.3rem auto; /* auto på left/right = centrer max-width-blokken */
@@ -268,7 +276,7 @@ aside {
 .direction-knapper {
   display: flex;
   justify-content: space-between;
-  width: 90vw;
+  width: 69vw;
   margin: 2rem auto;
 }
 
@@ -280,6 +288,17 @@ aside {
 /* Mobil version                */
 /*------------------------------*/
 @media (max-width: 768px) {
+  main {
+    max-width: 95vw;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 1.5rem auto; /* center paragraphs */
+    max-width: 95vw;
+  }
   .hamburger-menu {
     display: block; /* Show hamburger menu on mobile */
   }
@@ -313,5 +332,25 @@ aside {
 
   .medie-blok {
     width: 80vw; /* styrer bredden for både billede/embed + tekst */
+  }
+
+  .direction-knapper {
+    width: 90vw;
+  }
+}
+/*------------------------------*/
+/* About Me Grid                */
+/*------------------------------*/
+
+@media (min-width: 769px) {
+  #about-me-picture .medie-blok img {
+    max-width: 400px;
+  }
+
+  .grid-1-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
   }
 }
