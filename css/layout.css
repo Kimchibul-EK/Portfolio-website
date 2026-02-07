@@ -49,6 +49,11 @@ p {
   max-width: 69vw;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 .content-description p {
   text-align: center;
   margin: 0.3rem auto; /* auto på left/right = centrer max-width-blokken */
@@ -339,18 +344,17 @@ p {
   }
 }
 /*------------------------------*/
-/* About Me Grid                */
+/* About Me                     */
 /*------------------------------*/
 
 @media (min-width: 769px) {
   #about-me-picture .medie-blok img {
-    max-width: 400px;
+    max-width: 500px;
   }
 
   .grid-1-1 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    align-items: start;
   }
 }
