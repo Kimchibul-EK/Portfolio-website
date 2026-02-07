@@ -270,26 +270,26 @@ header {
 /*------------------------------*/
 
 .hero-section {
-  background-image: url("/assets/forside/shibuya-horisontal.webp");
+  background-image: url("../assets/forside/shibuya-horisontal.webp");
 }
 #om-mig-hero:hover img {
-  content: url("/assets/forside/paper-me-hover.webp");
+  content: url("../assets/forside/paper-me-hover.webp");
 }
 
 #intro-hero:hover img {
-  content: url("/assets/forside/paper-money-hover.webp");
+  content: url("../assets/forside/paper-money-hover.webp");
 }
 
 #web-hero:hover img {
-  content: url("/assets/forside/paper-briefcase-hover.webp");
+  content: url("../assets/forside/paper-briefcase-hover.webp");
 }
 
 #uxui-hero:hover img {
-  content: url("/assets/forside/paper-figure-hover.webp");
+  content: url("../assets/forside/paper-figure-hover.webp");
 }
 
 #content-hero:hover img {
-  content: url("/assets/forside/paper-ramen-hover.webp");
+  content: url("../assets/forside/paper-ramen-hover.webp");
 }
 
 /*------------------------------*/
