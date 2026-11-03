@@ -2,7 +2,6 @@
 /* Universelle                  */
 /*------------------------------*/
 
-/* wanted to use defined spaces, but turned out to be a hassle. Haven't used much on the page */
 :root {
   --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
@@ -13,22 +12,24 @@
   --space-xxl: 6rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
 main {
+  width: 100%;
   max-width: 69vw;
   margin: 0 auto;
   padding: 0 1.5rem;
+  min-width: 0;
 }
 
 #main-forside {
@@ -39,11 +40,13 @@ main {
 
 .main-content {
   width: 100%;
+  min-width: 0;
   text-align: left;
 }
 
 aside {
   width: 100%;
+  min-width: 0;
   padding: 1.5rem;
 }
 
@@ -51,8 +54,8 @@ h1,
 h2,
 h3,
 p {
-  margin: 1.5rem auto; /* center paragraphs */
-  max-width: 69vw;
+  margin: 1.5rem auto;
+  max-width: 100%;
 }
 
 h1 {
@@ -62,12 +65,15 @@ h1 {
 
 .content-description p {
   text-align: center;
-  margin: 0.3rem auto; /* auto på left/right = centrer max-width-blokken */
+  margin: 0.3rem auto;
 }
 
+/* Rettet: bruger containerens bredde i stedet for viewport */
 .medie-blok {
-  width: 69vw; /* styrer bredden for både billede/embed + tekst */
-  margin: 2rem auto; /* centrer + lidt luft under blokken */
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 2rem auto;
 }
 
 /*------------------------------*/
@@ -91,18 +97,21 @@ h1 {
 
 .nav-menucontainer {
   flex: 1;
+  min-width: 0;
 }
 
 /* Dark mode toggle container */
-/* .dark-mode {
+/*
+.dark-mode {
   display: flex;
   align-items: center;
   margin-left: auto;
   padding-left: 1rem;
-} */
+}
+*/
 
 .hamburger-part {
-  display: block; /*stacks bars vertically*/
+  display: block;
   width: 2.5rem;
   height: 0.3rem;
   margin: 0.6rem auto;
@@ -152,13 +161,13 @@ h1 {
 }
 
 .hero-selection > a > img {
-  display: block; /* Remove bottom whitespace */
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
 #om-mig-hero {
-  grid-column: 2 / 4; /* Centered in the grid */
+  grid-column: 2 / 4;
   grid-row: 1 / -1;
 }
 
@@ -188,65 +197,58 @@ h1 {
 
 .medie-blok .youtube-embed {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
 
-/* YouTube iframe skalerer inde i sin container */
 .medie-blok .youtube-embed iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
 /*------------------------------*/
 /* Image Embed & Carousel       */
 /*------------------------------*/
 
-/*landscape version*/
+/* Landscape version */
 .medie-blok .image-carousel,
 .medie-blok .image-wrapper {
   position: relative;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
 }
 
+/* Image wrapper skal følge billedets naturlige højde */
 .medie-blok .image-wrapper {
   aspect-ratio: auto;
 }
 
+/* Rettet: billeder må aldrig overskride containeren */
 .medie-blok .image-wrapper img {
-  max-width: 100%; /* må gerne blive mindre, men ikke større end originalen */
-  height: auto;
-  width: auto; /* eller bare fjern width helt */
-  object-fit: contain; /* eller fjern helt – vigtigst er at du IKKE bruger cover */
   display: block;
-  margin: 0 auto; /* hvis du vil centrere billedet horisontalt */
-}
-
-/* denne kode er ikke nødvendig, og skaber faktisk et skaleringsproblem, som jeg ikke helt forstår. Bedst at ignorere den. */
-/* .medie-blok img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-} */
-
-/* portrait version */
-.medie-blok .image-carousel.portrait {
-  aspect-ratio: 3 / 4;
-  max-height: 600px;
-  width: 100%;
-}
-
-.medie-blok .image-carousel.portrait {
-  aspect-ratio: 3 / 4;
-  max-height: 600px;
   width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Portrait version */
+.medie-blok .image-carousel.portrait {
+  aspect-ratio: 3 / 4;
+  max-height: 600px;
+  width: 100%;
+  max-width: 450px;
 }
 
 /* Slides inde i carousel */
@@ -268,6 +270,7 @@ h1 {
   display: block;
 }
 
+/* Portrait-billeder skal vises uden beskæring */
 .medie-blok .image-carousel.portrait img {
   max-height: 600px;
   width: 100%;
@@ -288,7 +291,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 0rem auto;
+  margin: 0 auto;
 }
 
 .direction-knapper > div:only-child {
@@ -298,20 +301,24 @@ h1 {
 /*------------------------------*/
 /* Mobil version                */
 /*------------------------------*/
+
 @media (max-width: 768px) {
   main {
+    width: 100%;
     max-width: 95vw;
+    padding: 0 1rem;
   }
 
   h1,
   h2,
   h3,
   p {
-    margin: 1.5rem auto; /* center paragraphs */
-    max-width: 95vw;
+    margin: 1.5rem auto;
+    max-width: 100%;
   }
+
   .hamburger-menu {
-    display: block; /* Show hamburger menu on mobile */
+    display: block;
   }
 
   .nav-menupunkter {
@@ -337,12 +344,19 @@ h1 {
   }
 
   .hero-selection {
-    width: 100vw;
-    min-width: auto;
+    width: 100%;
+    min-width: 0;
   }
 
+  /* Rettet: medieblok følger main */
   .medie-blok {
-    width: 80vw; /* styrer bredden for både billede/embed + tekst */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .medie-blok .image-wrapper img {
+    max-width: 100%;
+    height: auto;
   }
 
   .direction-knapper {
@@ -354,18 +368,19 @@ h1 {
     font-size: 1rem;
   }
 }
+
 /*------------------------------*/
 /* About Me                     */
 /*------------------------------*/
 
 @media (min-width: 769px) {
   #about-me-picture .medie-blok img {
-    max-width: 500px;
+    max-width: min(500px, 100%);
   }
 
   .grid-1-1 {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     gap: 2rem;
   }
 }
